@@ -11,9 +11,7 @@ class Vertice(object):
 
 
 
-#Se crea la clase grafo con vertices e indices de aristas como diccionarios
-
-#y aristas como una lista.
+#Se crea la clase grafo con vertices e indices de aristas como diccionarios y aristas como una lista.
 
 class Grafo(object):
 
@@ -27,15 +25,13 @@ class Grafo(object):
 
  def agregarVertice(self,vertice):
 
-  #Si vertice es una instancia de su clase y su nombre no esta en el 
-
-  #diccionario de vertices se agrega.
+  #Si vertice es una instancia de su clase y su nombre no esta en el diccionario de vertices se agrega.
 
   if isinstance(vertice, Vertice) and vertice.nombre not in self.vertices:
 
    self.vertices[vertice.nombre] = vertice
 
-   #Se recorre los aristas y se agregan.
+   #Se recorre las aristas y se agregan.
 
    for fila in self.aristas:
 
@@ -53,9 +49,9 @@ class Grafo(object):
 
 
 
- def agregarBorde(self,u,v, peso=1):
+ def agregarArista(self,u,v, peso=1):
 
-  #Se agrega el borde.
+  #Se agrega el arista.
 
   if u in self.vertices and v in self.vertices:
 
@@ -105,6 +101,6 @@ if __name__ == '__main__':
     g.agregarVertice(Vertice(str(item)))  
 
   for arista in aristas:
-    g.agregarBorde(arista[:1],arista[1:])
+    g.agregarArista(arista[:1],arista[1:])
 
   g.printGrafo()
