@@ -77,7 +77,7 @@ class Grafo(object):
   for v, i in sorted(self.indices_aristas.items()):
    print(v, end='')
    for j in range(len(self.aristas)):
-    print('',{True: self.color+'1'+self.ENDC, False: '0'}[self.aristas[i][j] == 1], end='')
+    print('',{True: self.color+'1'+self.ENDC, False: '0'}[self.aristas[i][j]== 1], end='')
    print(' ')  
 
 
