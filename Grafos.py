@@ -65,9 +65,9 @@ class Grafo(object):
 
    return False
 
-'''
+
  def printGrafo(self):
-  os.system('clear')
+  #os.system('clear')
   #Se muestra el grafo
   print('Representado como matriz')
   print ('  ',end= "")
@@ -78,42 +78,26 @@ class Grafo(object):
    print(v, end='')
    for j in range(len(self.aristas)):
     print('',{True: self.color+'1'+self.ENDC, False: '0'}[self.aristas[i][j] == 1], end='')
-   print(' ')    
-'''
-def printGrafo(self):
+   print(' ')  
 
-  #Se muestra el grafo
 
-  for v, i in sorted(self.indices_aristas.items()):
 
-   print(v + ' ', end='')
-
-   for j in range(len(self.aristas)):
-
-    print(self.aristas[i][j], end='')
-
-   print(' ')
 
 
 if __name__ == '__main__':
   aristas=[]
-  vertices2=[]
   g = Grafo()
   NA =  int(input('Cuantas aristas hay?: '))
   for i in range(NA):
     arista = input('Escribe los indices de los vertices ( ejemplo: "12") ')
     aristas.append(arista)
 
-  for i in range(len(aristas)):
-    x= aristas[i]
-    for item in list(x):
-      if not item in vertices2:
-        vertices2.append(item)
 
-  for item in vertices2:
-    g.agregarVertice(Vertice(str(item)))  
+  for i in range(1, len(aristas)+1):
+    g.agregarVertice(Vertice(str(i)))
+
 
   for arista in aristas:
     g.agregarArista(arista[:1],arista[1:])
-
   g.printGrafo()
+
