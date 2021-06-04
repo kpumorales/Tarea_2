@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import os
 
-
+#Se crea la clase vertice que solo tiene como argumento su nombre.
 
 class Vertice(object):
 
