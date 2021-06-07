@@ -105,7 +105,7 @@ if __name__ == '__main__':
     aristas.append(arista)
 
 
-  for i in range(1, len(aristas)+1):
+  for i in range(1, len(aristas)):
     g.agregarVertice(Vertice(str(i)))
 
 
