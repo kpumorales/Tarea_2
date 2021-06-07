@@ -4,17 +4,29 @@ import os
 #Se crea la clase vertice que solo tiene como argumento su nombre.
 
 class Vertice(object):
+ 
+ """Clase vértice que representa los vértices de un grafo
+
+ Attributes:
+   nombre     nombre de la clase
+ """
 
  def __init__(self, n):
 
   self.nombre = n
 
-
-
-#Se crea la clase grafo con vertices e indices de aristas como diccionarios y aristas como una lista.
-
 class Grafo(object):
+ 
+ """Grafo que contiene vértices e indices de aristas como diccionarios y aristas como una lista.
 
+ Attributes:
+   vertices     los vértices del grafo
+   aristas      unen los vértices del grafo
+   indices_aristas Representa el índice de cada arista
+   color        Color con el que se grafica el grafo
+   ENDC         
+ """
+ 
  vertices = {}
  aristas = []
  indices_aristas = {}
